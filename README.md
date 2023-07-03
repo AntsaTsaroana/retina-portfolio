@@ -1,3 +1,3 @@
 # retina-portfolio
 
-The portdolio is live at https://retinaportfolio.netlify.app
+Our portfolio is live at https://retina-portfolio.netlify.app
