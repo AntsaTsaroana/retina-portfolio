@@ -1,0 +1,82 @@
+@import "./style.css";
+
+/* NOS PROJETS */
+
+.nosProjets {
+  max-width: 1200px;
+  width: 100vw;
+  position: relative;
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 45px;
+}
+
+.nosProjets h1, .teamSection h1 {
+  color: #f8b01d;
+}
+
+.projectSection {
+  display: flex;
+  width: 75%;
+  margin: 50px auto;
+}
+
+.imgProject {
+  width: 25%;
+  height: 100%;
+}
+
+.imgProject > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.detailsProject {
+  width: 75%;
+  text-align: left;
+  padding: 25px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.detailsProject > p {
+  margin-top: 10px;
+}
+
+.detailsProject > h4 {
+    color: #2778b9;
+}
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 845px) {
+    .projectSection {
+        flex-direction: column;
+    }
+
+    .imgProject {
+        width: 35%;
+    }
+
+    .imgProject, .detailsProject {
+        margin: 0 auto;
+    }
+
+    .detailsProject {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* MOBILE */
+@media screen and (max-width: 400px) {
+    .imgProject {
+        width: 55%;
+    }
+
+    .detailsProject {
+        padding: 25px 0;
+    }
+}

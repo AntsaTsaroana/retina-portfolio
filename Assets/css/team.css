@@ -1,0 +1,158 @@
+@import "./style.css";
+
+/* LA TEAM */
+
+.teamSection {
+  position: relative;
+  top:-45px;
+  display: flex;
+  max-width: 1200px;
+  width: 85vw;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.teamSection h1 {
+  padding-top: 0;
+}
+
+.teamSection p {
+  margin: 10px auto 0;
+}
+
+.text_team {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.team {
+  display: flex;
+  width: 45%;
+  margin: 25px auto;
+  gap: 15px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.our-team {
+  position: relative;
+  width: 210px;
+  height: 210px;
+  background: #000;
+  text-align: center;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.our-team img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+  filter: grayscale(1);
+  transition: 0.5s;
+}
+
+.our-team:hover img {
+  opacity: 0.5;
+  filter: grayscale(0);
+}
+.our-team .team-content {
+  padding: 5px 10px 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  transform: rotate(45deg) translate(-50%, -50%);
+  transform-origin: 0 0;
+  transition: all 0.55s ease 0s;
+}
+.our-team:hover .team-content {
+  opacity: 1;
+}
+.our-team .team-content:before,
+.our-team .team-content:after {
+  content: "";
+  width: 400px;
+  height: 2px;
+  background: #95ccea;
+  position: absolute;
+  top: 0;
+  left: 10px;
+  transform: translateX(100%);
+  transition: all 0.55s ease 0s;
+}
+.our-team .team-content:after {
+  top: auto;
+  left: auto;
+  bottom: 0;
+  right: 10px;
+  transform: translateX(-100%);
+}
+.our-team:hover .team-content:before,
+.our-team:hover .team-content:after {
+  transform: translate(0, 0);
+  transition-delay: 0.15s;
+}
+.our-team .title {
+  font-size: 20px;
+  font-weight: 400;
+  color: #fff;
+  text-transform: uppercase;
+  margin: 0;
+}
+.our-team .title:before,
+.our-team .title:after {
+  content: "";
+  width: 2px;
+  height: 300px;
+  background: #95ccea;
+  position: absolute;
+  top: 10px;
+  right: 0;
+  transform: translateY(100%);
+  transition: all 0.55s ease 0s;
+}
+.our-team .title:after {
+  top: auto;
+  right: auto;
+  bottom: 10px;
+  left: 0;
+  transform: translateY(-100%);
+}
+.our-team:hover .title:before,
+.our-team:hover .title:after {
+  transform: translate(0, 0);
+}
+.our-team .post {
+  display: block;
+  padding: 5px 10px;
+  background: #95ccea;
+  font-size: 17px;
+  font-weight: 700;
+  color: #000;
+  text-transform: capitalize;
+}
+
+/* RESPONSIVE */
+
+@media only screen and (max-width: 990px) {
+  .our-team {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 845px) {
+    .teamSection {
+        flex-direction: column;
+    }
+
+    .team {
+        width: 70%;
+    }
+}

@@ -1,0 +1,346 @@
+*,
+::after,
+::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /* border: 1px solid red; */
+  cursor: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: "BlackOpsOne";
+  src: url(../fonts/BlackOpsOne-Regular.ttf);
+}
+
+/* GLOBALE PROPERTY */
+
+.btnGlobale {
+  position: relative;
+  top: 35px;
+  padding: 10px 20px;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #fff;
+}
+
+.hideElement {
+  display: block;
+  overflow: hidden;
+}
+
+/* ------------------ */
+
+body {
+  position: relative;
+  background-color: #fff;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  overflow: hidden;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 15px;
+  width: 200px;
+  height: 40px;
+  padding: 0 3px;
+  background-color: rgb(250 176 25 / 77%);
+  backdrop-filter: blur(5px);
+  border-radius: 50px;
+  z-index: 10;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+nav a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+a.active {
+  background-color: #15100178;
+}
+
+/* HEADER */
+
+header {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.15) 0%,
+      rgba(0, 0, 0, 0.15) 100%
+    ),
+    linear-gradient(90deg, rgb(0, 0, 0), rgb(0 13 36));
+  box-shadow: 1px 4px 6px 0px #00000085;
+}
+
+.spanH1 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 65vh;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.largeH1 {
+  position: absolute;
+  top:-45%;
+  color: #ffffff14;
+  font-size: 40vw !important;
+  z-index: 0;
+  animation: leftRight 85s linear infinite;
+}
+
+@keyframes leftRight {
+  0%,
+  100% {
+    transform: translateX(-10%);
+  }
+  50% {
+    transform: translateX(-25%);
+  }
+}
+
+.logo_xs {
+  position: absolute;
+  top: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70px;
+  height: 70px;
+}
+
+.logo_xs > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.header_info {
+  position: absolute;
+  top: 150px;
+  left: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  transform: translateX(-50%);
+  width: 85vw;
+  height: 70vh;
+  z-index: 1;
+}
+
+.text {
+  width: 50%;
+  height: 100%;
+  color: #fff;
+}
+
+.text h1 {
+  font-size: 5vw;
+}
+
+.retina {
+  position: relative;
+  top: 15px;
+  margin: 15px 0 1px;
+  display: block;
+  height: 2vw;
+  width: 6.1vw;
+}
+
+.retina img {
+  width: 100%;
+  height: 100%;
+}
+
+.text p {
+  font-size: 1.3vw;
+}
+
+.quality {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+  height: 21px;
+}
+
+.quality span {
+  width: 100px;
+  height: 2px;
+  border-radius: 5px;
+  margin-right: 15px;
+  background-image: linear-gradient(90deg, rgb(35 119 188), rgb(252 171 30));
+}
+
+/* BUTTONS */
+.btnfos {
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 45px;
+  max-width: 200px;
+  margin-top: 60px;
+  position: relative;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.btnfos-1 {
+  font-weight: 100;
+  transition: 0.5s;
+}
+.btnfos-1 svg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 45px;
+}
+.btnfos-1 rect {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 1;
+  stroke-dasharray: 422, 0;
+  transition: 0.5s;
+}
+
+.btnfos-1:hover {
+  letter-spacing: 1px;
+  color: #f8b01d;
+}
+.btnfos-1:hover rect {
+  stroke: #2778b9;
+  stroke-dasharray: 60, 421;
+  stroke-dashoffset: 48;
+  -webkit-transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.logo_lg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: -40px;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.logo_lg .neon {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.3);
+  animation: rotate 10s linear infinite;
+}
+
+#clock {
+  font-family: "BlackOpsOne";
+  font-size: 2vw;
+  text-align: center;
+  color: #fff;
+}
+
+/* ANIMATION NEON */
+@keyframes rotate {
+  to {
+    rotate: 360deg;
+  }
+}
+
+/* ---------- RESPONSIVE ---------- */
+
+/* TABLET */
+@media screen and (max-width: 845px) {
+  .header_info {
+    flex-direction: column-reverse;
+    flex-wrap: nowrap;
+  }
+
+  header .largeH1 {
+    top: 15%;
+    font-size: 50vw;
+  }
+
+  .text {
+    position: relative;
+    top: -35px;
+    width: 58%;
+    margin: 0 auto;
+  }
+
+  .text h1 {
+    font-size: 45px;
+  }
+
+  .text p {
+    font-size: 12px;
+  }
+
+  .retina {
+    height: 15px;
+    width: 52px;
+  }
+
+  .btnfos {
+    margin: 60px auto;
+  }
+
+  .logo_lg {
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  .logo_lg .neon {
+    display: none;
+  }
+
+  #clock {
+    font-size: 20px;
+  }
+}
+
+/* MOBILE */
+@media screen and (max-width: 400px) {
+  .btnfos {
+    display: none;
+  }
+  .retina {
+    display: none;
+  }
+  .logo_lg {
+    width: 100%;
+  }
+  .logo_lg .neon {
+    display: block;
+  }
+  .quality {
+    font-size: 10px;
+  }
+}

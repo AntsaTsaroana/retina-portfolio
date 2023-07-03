@@ -1,0 +1,157 @@
+@import "./style.css";
+
+/* QUI SOMMES NOUS */
+.aboutUs {
+  display: flex;
+  flex-wrap: nowrap;
+  max-width: 1200px;
+  width: 100vw;
+  margin: 0 auto;
+}
+
+.img_aboutUs {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  height: 100%;
+}
+
+.laptop_img {
+  background: url(../pictures/laptop.webp) no-repeat center;
+  background-size: cover;
+  width: 18vw;
+  height: 18vw;
+  margin: 75px 0 50px;
+  border-radius: 72% 28% 63% 37% / 40% 83% 17% 60%;
+  box-shadow: 4px 4px 7px 0px #00000085;
+  animation: borderAnimation 10s linear infinite;
+}
+
+.laptop_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@keyframes borderAnimation {
+  0% {
+    border-radius: 56% 44% 42% 58% / 75% 48% 52% 25%;
+  }
+  50% {
+    border-radius: 72% 28% 63% 37% / 40% 83% 17% 60%;
+  }
+  100% {
+    border-radius: 56% 44% 42% 58% / 75% 48% 52% 25%;
+  }
+}
+
+.txt_aboutUs {
+  position: relative;
+  width: 40%;
+  height: 100%;
+}
+
+.txt_aboutUs h3 {
+  font-weight: lighter;
+  margin-top: 50px;
+  color: #b47900;
+}
+
+.txt_aboutUs h2 {
+  margin-bottom: 25px;
+  color: #2778b9;
+}
+
+.plusDetails {
+  border: 1px solid #b47900;
+  color: #b47900;
+  background-color: #f8b01d3b;
+  transition: 0.5s;
+  margin-bottom: 75px;
+}
+
+.plusDetails:hover {
+  letter-spacing: 1px;
+}
+
+.respBtn {
+  height: 100px;
+}
+
+.quotes {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 40vh;
+  width: 100%;
+  color: #212121;
+}
+
+.sidekick {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-left: 1em;
+  border-left: 0.2em solid #2778b9;
+  font-family: "Roboto", serif;
+  font-size: 1.4em;
+  line-height: 1.5em;
+  font-weight: 100;
+  width: 55%;
+  margin: 0 auto;
+  z-index: 2;
+}
+.sidekick:before,
+.sidekick:after {
+  color: #f8b01d;
+  font-size: 34px;
+}
+.sidekick:before {
+  content: "\201e";
+}
+.sidekick:after {
+  content: "\201c";
+}
+.sidekick cite {
+  font-size: 50%;
+  text-align: center;
+  top: 50%;
+}
+.sidekick cite:before {
+  content: " \2015 ";
+}
+
+/* ---------- RESPONSIVE ---------- */
+
+/* TABLET */
+@media screen and (max-width: 768px) {
+  /* QUI SOMMES NOUS */
+  .aboutUs {
+    flex-direction: column;
+  }
+
+  .img_aboutUs {
+    width: 100%;
+  }
+
+  .laptop_img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .txt_aboutUs {
+    width: 75%;
+    margin: 0 auto;
+  }
+
+  .respBtn {
+    text-align: center;
+  }
+}
+
+/* MOBILE */
+@media screen and (max-width: 400px) {
+    .sidekick {
+      font-size: 1em;
+    }
+  }
