@@ -10,6 +10,7 @@
   width: 85vw;
   text-align: center;
   margin: 0 auto;
+  flex-direction: column;
 }
 
 .teamSection h1 {
@@ -29,7 +30,7 @@
 
 .team {
   display: flex;
-  width: 45%;
+  max-width: 500px;
   margin: 25px auto;
   gap: 15px;
   flex-wrap: wrap;
@@ -148,10 +149,6 @@
 }
 
 @media screen and (max-width: 845px) {
-    .teamSection {
-        flex-direction: column;
-    }
-
     .team {
         width: 70%;
     }

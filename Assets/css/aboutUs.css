@@ -124,7 +124,7 @@
 /* ---------- RESPONSIVE ---------- */
 
 /* TABLET */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 845px) {
   /* QUI SOMMES NOUS */
   .aboutUs {
     flex-direction: column;
@@ -142,6 +142,10 @@
   .txt_aboutUs {
     width: 75%;
     margin: 0 auto;
+  }
+
+  .sidekick {
+    font-size: 1em;
   }
 
   .respBtn {

@@ -9,7 +9,7 @@ footer {
   position: relative;
   text-align: center;
   width: 100vw;
-  height: 35vh;
+  padding: 25px;
   background-image: linear-gradient(
       0deg,
       rgba(0, 0, 0, 0.15) 0%,
@@ -65,9 +65,9 @@ footer {
   }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 615px) {
   footer {
-    padding: 35px 0 35px;
+    padding: 35px 0 60px;
     height: auto;
   }
 
