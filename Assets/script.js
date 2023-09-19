@@ -5,9 +5,8 @@ window.addEventListener("load", function () {
   loadingOverlay.style.display = "none";
   document.body.style.overflow = "auto";
   document.body.style.overflowX = "hidden";
+  revealAnim();
 });
-
-window.addEventListener("load", revealAnim);
 
 // CURSOR
 
