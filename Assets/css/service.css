@@ -10,16 +10,27 @@
   margin: 0 auto;
 }
 
-.serviceH1 {
+.absoluteH1 {
+  display: flex;
+  align-items: center;
   position: absolute;
-  top: -45%;
+  left: 50%;
+  top: 75%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 65vh;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.serviceH1 {
   color: #d6e6f247;
   font-size: 40vw !important;
   z-index: -2;
   animation: leftRight 85s linear infinite;
 }
 
-.nosService > h1,
+.nosService>h1,
 .nosProjets h1,
 .teamSection h1 {
   padding-top: 25px;
@@ -27,21 +38,27 @@
   font-size: 35px;
 }
 
-.nosService > p,
-.nosProjets > p,
+.nosService>p,
+.nosProjets>p,
 .teamSection p {
   width: 75%;
   margin: 25px auto 0;
 }
 
 .allServices {
+  display: flex;
+  width: 85%;
+  margin: 75px auto 25px;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 15px;
   width: 85%;
   margin: 75px auto 25px;
 }
 
 .services {
   text-align: left;
-  width: 75%;
+  width: clamp(15.3125rem, 12.7312rem + 12.9063vw, 23.75rem);
   padding: 25px;
   margin: 0 auto;
   border-radius: 5px;
@@ -55,8 +72,15 @@
 }
 
 .services:nth-child(2) {
+  background: #0cae5511;
+  border-top: 3px solid #0cae56;
+}
+.services:nth-child(3) {
+  background: #c87d9f17;
+  border-top: 3px solid #c87d9f;
+}
+.services:nth-child(4) {
   background: rgb(248 176 29 / 8%);
-  margin-top: 45px;
   border-top: 3px solid #f8b01d;
 }
 
@@ -74,8 +98,8 @@
   object-fit: cover;
 }
 
-.services > p {
-  margin-top: 10px;
+.services>p {
+  margin-top: 20px;
   font-size: 12px;
 }
 

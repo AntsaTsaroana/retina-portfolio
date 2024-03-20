@@ -1,478 +1,441 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="./Assets/pictures/favicon_io/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="/Assets/pictures/favicon_io/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="./Assets/pictures/favicon_io/favicon-16x16.png"
-    />
-    <title>Retina Portfolio</title>
-    <link rel="stylesheet" href="./Assets/css/style.css">
-    <link rel="stylesheet" href="/Assets/css/loading.css" />
-    <link rel="stylesheet" href="/Assets/css/scrollbar.css" />
-    <link rel="stylesheet" href="/Assets/css/cursor.css" />
-    <link rel="stylesheet" href="/Assets/css/aos.css" />
-    <link rel="stylesheet" href="/Assets/css/aboutUs.css" />
-    <link rel="stylesheet" href="/Assets/css/service.css" />
-    <link rel="stylesheet" href="/Assets/css/projet.css" />
-    <link rel="stylesheet" href="/Assets/css/team.css" />
-    <link rel="stylesheet" href="/Assets/css/contactez.css" />
-    <link rel="stylesheet" href="/Assets/css/techno.css" />
-    <link rel="stylesheet" href="/Assets/css/footer.css" />
-  </head>
-  <body>
-    <!-- CURSOR -->
-    <div class="cursor"></div>
-    <div class="follower"></div>
 
-    <!-- SCROLLBAR -->
-    <div id="progress-bar-container">
-      <div id="progress-bar"></div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="apple-touch-icon" sizes="180x180" href="./Assets/pictures/favicon_io/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/Assets/pictures/favicon_io/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="./Assets/pictures/favicon_io/favicon-16x16.png" />
+  <title>Retina Portfolio</title>
+  <link rel="stylesheet" href="./Assets/css/style.css">
+  <link rel="stylesheet" href="./Assets/css/animation.css">
+  <link rel="stylesheet" href="/Assets/css/loading.css" />
+  <link rel="stylesheet" href="/Assets/css/scrollbar.css" />
+  <link rel="stylesheet" href="/Assets/css/cursor.css" />
+  <link rel="stylesheet" href="/Assets/css/aboutUs.css" />
+  <link rel="stylesheet" href="/Assets/css/service.css" />
+  <link rel="stylesheet" href="/Assets/css/projet.css" />
+  <link rel="stylesheet" href="/Assets/css/team.css" />
+  <link rel="stylesheet" href="/Assets/css/contactez.css" />
+  <link rel="stylesheet" href="/Assets/css/techno.css" />
+  <link rel="stylesheet" href="/Assets/css/footer.css" />
+</head>
+
+<body>
+  <!-- CURSOR -->
+  <!-- <div class="cursor"></div>
+  <div class="follower"></div> -->
+
+  <!-- SCROLLBAR -->
+  <div id="progress-bar-container">
+    <div id="progress-bar"></div>
+  </div>
+
+  <!-- LOADING -->
+  <div class="wrapperLoad">
+    <h1>RETINA</h1>
+    <div class="progress"></div>
+  </div>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <a href="#">
+      <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512">
+        <!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+        <style>
+          svg {
+            fill: #ffffff;
+          }
+        </style>
+        <path
+          d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40H456c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1H416 392c-22.1 0-40-17.9-40-40V448 384c0-17.7-14.3-32-32-32H256c-17.7 0-32 14.3-32 32v64 24c0 22.1-17.9 40-40 40H160 128.1c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2H104c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9 .1-2.8V287.6H32c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z" />
+      </svg></a>
+    <a href="#qui-sommes-nous">
+      <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 320 512">
+        <!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+        <style>
+          svg {
+            fill: #ffffff;
+          }
+        </style>
+        <path
+          d="M80 160c0-35.3 28.7-64 64-64h32c35.3 0 64 28.7 64 64v3.6c0 21.8-11.1 42.1-29.4 53.8l-42.2 27.1c-25.2 16.2-40.4 44.1-40.4 74V320c0 17.7 14.3 32 32 32s32-14.3 32-32v-1.4c0-8.2 4.2-15.8 11-20.2l42.2-27.1c36.6-23.6 58.8-64.1 58.8-107.7V160c0-70.7-57.3-128-128-128H144C73.3 32 16 89.3 16 160c0 17.7 14.3 32 32 32s32-14.3 32-32zm80 320a40 40 0 1 0 0-80 40 40 0 1 0 0 80z" />
+      </svg></a>
+    <a href="#services">
+      <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512">
+        <!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+        <style>
+          svg {
+            fill: #ffffff;
+          }
+        </style>
+        <path
+          d="M64 64C28.7 64 0 92.7 0 128V384c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V128c0-35.3-28.7-64-64-64H64zM272 192H496c8.8 0 16 7.2 16 16s-7.2 16-16 16H272c-8.8 0-16-7.2-16-16s7.2-16 16-16zM256 304c0-8.8 7.2-16 16-16H496c8.8 0 16 7.2 16 16s-7.2 16-16 16H272c-8.8 0-16-7.2-16-16zM164 152v13.9c7.5 1.2 14.6 2.9 21.1 4.7c10.7 2.8 17 13.8 14.2 24.5s-13.8 17-24.5 14.2c-11-2.9-21.6-5-31.2-5.2c-7.9-.1-16 1.8-21.5 5c-4.8 2.8-6.2 5.6-6.2 9.3c0 1.8 .1 3.5 5.3 6.7c6.3 3.8 15.5 6.7 28.3 10.5l.7 .2c11.2 3.4 25.6 7.7 37.1 15c12.9 8.1 24.3 21.3 24.6 41.6c.3 20.9-10.5 36.1-24.8 45c-7.2 4.5-15.2 7.3-23.2 9V360c0 11-9 20-20 20s-20-9-20-20V345.4c-10.3-2.2-20-5.5-28.2-8.4l0 0 0 0c-2.1-.7-4.1-1.4-6.1-2.1c-10.5-3.5-16.1-14.8-12.6-25.3s14.8-16.1 25.3-12.6c2.5 .8 4.9 1.7 7.2 2.4c13.6 4.6 24 8.1 35.1 8.5c8.6 .3 16.5-1.6 21.4-4.7c4.1-2.5 6-5.5 5.9-10.5c0-2.9-.8-5-5.9-8.2c-6.3-4-15.4-6.9-28-10.7l-1.7-.5c-10.9-3.3-24.6-7.4-35.6-14c-12.7-7.7-24.6-20.5-24.7-40.7c-.1-21.1 11.8-35.7 25.8-43.9c6.9-4.1 14.5-6.8 22.2-8.5V152c0-11 9-20 20-20s20 9 20 20z" />
+      </svg>
+    </a>
+    <a href="#ourTeam">
+      <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 640 512">
+        <!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+        <style>
+          svg {
+            fill: #ffffff;
+          }
+        </style>
+        <path
+          d="M72 88a56 56 0 1 1 112 0A56 56 0 1 1 72 88zM64 245.7C54 256.9 48 271.8 48 288s6 31.1 16 42.3V245.7zm144.4-49.3C178.7 222.7 160 261.2 160 304c0 34.3 12 65.8 32 90.5V416c0 17.7-14.3 32-32 32H96c-17.7 0-32-14.3-32-32V389.2C26.2 371.2 0 332.7 0 288c0-61.9 50.1-112 112-112h32c24 0 46.2 7.5 64.4 20.3zM448 416V394.5c20-24.7 32-56.2 32-90.5c0-42.8-18.7-81.3-48.4-107.7C449.8 183.5 472 176 496 176h32c61.9 0 112 50.1 112 112c0 44.7-26.2 83.2-64 101.2V416c0 17.7-14.3 32-32 32H480c-17.7 0-32-14.3-32-32zm8-328a56 56 0 1 1 112 0A56 56 0 1 1 456 88zM576 245.7v84.7c10-11.3 16-26.1 16-42.3s-6-31.1-16-42.3zM320 32a64 64 0 1 1 0 128 64 64 0 1 1 0-128zM240 304c0 16.2 6 31 16 42.3V261.7c-10 11.3-16 26.1-16 42.3zm144-42.3v84.7c10-11.3 16-26.1 16-42.3s-6-31.1-16-42.3zM448 304c0 44.7-26.2 83.2-64 101.2V448c0 17.7-14.3 32-32 32H288c-17.7 0-32-14.3-32-32V405.2c-37.8-18-64-56.5-64-101.2c0-61.9 50.1-112 112-112h32c61.9 0 112 50.1 112 112z" />
+      </svg>
+    </a>
+    <a href="#contactezNous">
+      <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+        <!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+        <style>
+          svg {
+            fill: #ffffff;
+          }
+        </style>
+        <path
+          d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z" />
+      </svg>
+    </a>
+  </nav>
+  <header>
+    <span class="spanH1">
+      <h1 class="largeH1">RETINA</h1>
+    </span>
+    <div class="logo_xs">
+      <img src="./Assets/pictures/logo_noBG.webp" alt="logo xs" />
     </div>
-
-    <!-- LOADING -->
-    <div class="wrapperLoad">
-      <div class="loader"></div>
-    </div>
-
-    <!-- NAVIGATION -->
-    <nav>
-      <a href="#">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          height="1em"
-          viewBox="0 0 576 512"
-        >
-          <!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-          <style>
-            svg {
-              fill: #ffffff;
-            }
-          </style>
-          <path
-            d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40H456c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1H416 392c-22.1 0-40-17.9-40-40V448 384c0-17.7-14.3-32-32-32H256c-17.7 0-32 14.3-32 32v64 24c0 22.1-17.9 40-40 40H160 128.1c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2H104c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9 .1-2.8V287.6H32c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z"
-          /></svg></a>
-      <a href="#qui-sommes-nous">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          height="1em"
-          viewBox="0 0 320 512"
-        >
-          <!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-          <style>
-            svg {
-              fill: #ffffff;
-            }
-          </style>
-          <path
-            d="M80 160c0-35.3 28.7-64 64-64h32c35.3 0 64 28.7 64 64v3.6c0 21.8-11.1 42.1-29.4 53.8l-42.2 27.1c-25.2 16.2-40.4 44.1-40.4 74V320c0 17.7 14.3 32 32 32s32-14.3 32-32v-1.4c0-8.2 4.2-15.8 11-20.2l42.2-27.1c36.6-23.6 58.8-64.1 58.8-107.7V160c0-70.7-57.3-128-128-128H144C73.3 32 16 89.3 16 160c0 17.7 14.3 32 32 32s32-14.3 32-32zm80 320a40 40 0 1 0 0-80 40 40 0 1 0 0 80z"
-          /></svg></a>
-      <a href="#services">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          height="1em"
-          viewBox="0 0 576 512"
-        >
-          <!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-          <style>
-            svg {
-              fill: #ffffff;
-            }
-          </style>
-          <path
-            d="M64 64C28.7 64 0 92.7 0 128V384c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V128c0-35.3-28.7-64-64-64H64zM272 192H496c8.8 0 16 7.2 16 16s-7.2 16-16 16H272c-8.8 0-16-7.2-16-16s7.2-16 16-16zM256 304c0-8.8 7.2-16 16-16H496c8.8 0 16 7.2 16 16s-7.2 16-16 16H272c-8.8 0-16-7.2-16-16zM164 152v13.9c7.5 1.2 14.6 2.9 21.1 4.7c10.7 2.8 17 13.8 14.2 24.5s-13.8 17-24.5 14.2c-11-2.9-21.6-5-31.2-5.2c-7.9-.1-16 1.8-21.5 5c-4.8 2.8-6.2 5.6-6.2 9.3c0 1.8 .1 3.5 5.3 6.7c6.3 3.8 15.5 6.7 28.3 10.5l.7 .2c11.2 3.4 25.6 7.7 37.1 15c12.9 8.1 24.3 21.3 24.6 41.6c.3 20.9-10.5 36.1-24.8 45c-7.2 4.5-15.2 7.3-23.2 9V360c0 11-9 20-20 20s-20-9-20-20V345.4c-10.3-2.2-20-5.5-28.2-8.4l0 0 0 0c-2.1-.7-4.1-1.4-6.1-2.1c-10.5-3.5-16.1-14.8-12.6-25.3s14.8-16.1 25.3-12.6c2.5 .8 4.9 1.7 7.2 2.4c13.6 4.6 24 8.1 35.1 8.5c8.6 .3 16.5-1.6 21.4-4.7c4.1-2.5 6-5.5 5.9-10.5c0-2.9-.8-5-5.9-8.2c-6.3-4-15.4-6.9-28-10.7l-1.7-.5c-10.9-3.3-24.6-7.4-35.6-14c-12.7-7.7-24.6-20.5-24.7-40.7c-.1-21.1 11.8-35.7 25.8-43.9c6.9-4.1 14.5-6.8 22.2-8.5V152c0-11 9-20 20-20s20 9 20 20z"
-          />
-        </svg>
-      </a>
-      <a href="#ourTeam">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          height="1em"
-          viewBox="0 0 640 512"
-        >
-          <!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-          <style>
-            svg {
-              fill: #ffffff;
-            }
-          </style>
-          <path
-            d="M72 88a56 56 0 1 1 112 0A56 56 0 1 1 72 88zM64 245.7C54 256.9 48 271.8 48 288s6 31.1 16 42.3V245.7zm144.4-49.3C178.7 222.7 160 261.2 160 304c0 34.3 12 65.8 32 90.5V416c0 17.7-14.3 32-32 32H96c-17.7 0-32-14.3-32-32V389.2C26.2 371.2 0 332.7 0 288c0-61.9 50.1-112 112-112h32c24 0 46.2 7.5 64.4 20.3zM448 416V394.5c20-24.7 32-56.2 32-90.5c0-42.8-18.7-81.3-48.4-107.7C449.8 183.5 472 176 496 176h32c61.9 0 112 50.1 112 112c0 44.7-26.2 83.2-64 101.2V416c0 17.7-14.3 32-32 32H480c-17.7 0-32-14.3-32-32zm8-328a56 56 0 1 1 112 0A56 56 0 1 1 456 88zM576 245.7v84.7c10-11.3 16-26.1 16-42.3s-6-31.1-16-42.3zM320 32a64 64 0 1 1 0 128 64 64 0 1 1 0-128zM240 304c0 16.2 6 31 16 42.3V261.7c-10 11.3-16 26.1-16 42.3zm144-42.3v84.7c10-11.3 16-26.1 16-42.3s-6-31.1-16-42.3zM448 304c0 44.7-26.2 83.2-64 101.2V448c0 17.7-14.3 32-32 32H288c-17.7 0-32-14.3-32-32V405.2c-37.8-18-64-56.5-64-101.2c0-61.9 50.1-112 112-112h32c61.9 0 112 50.1 112 112z"
-          />
-        </svg>
-      </a>
-      <a href="#contactezNous">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          height="1em"
-          viewBox="0 0 512 512"
-        >
-          <!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-          <style>
-            svg {
-              fill: #ffffff;
-            }
-          </style>
-          <path
-            d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"
-          />
-        </svg>
-      </a>
-    </nav>
-    <header>
-      <span class="spanH1">
-        <h1 class="largeH1">RETINA</h1>
-      </span>
-      <div class="logo_xs">
-        <img src="./Assets/pictures/logo_noBG.png" alt="logo xs" />
-      </div>
-      <div class="header_info">
-        <!-- INFO TEXT -->
-        <div class="text">
-          <span class="retina"
-            ><img src="./Assets/pictures/retina_noBG.png" alt=""
-          /></span>
-          <div class="hideElement"><h1>RETINA</h1></div>
-
-          <br />
-          <div class="hideElement">
-            <p>Ouvrez les portes d'un web unique, où votre vision prend vie</p>
-            <p>
-              pour briller en réalité avec l'excellence digitale à votre portée.
-            </p>
-          </div>
-          <div class="hideElement">
-            <div class="quality"><span></span><i id="text_quality"></i></div>
-          </div>
-          <!-- BUTTONS -->
-          <div class="hideElement">
-            <a href="#qui-sommes-nous" class="btnfos btnfos-1">
-              <svg>
-                <rect x="0" y="0" fill="none" width="100%" height="100%" />
-              </svg>
-              Qui sommes nous ?
-            </a>
-          </div>
+    <div class="header_info">
+      <!-- INFO TEXT -->
+      <div class="text">
+        <span class="retina"><img src="./Assets/pictures/retina_noBG.png" alt="" /></span>
+        <div class="hideElement">
+          <h1>RETINA</h1>
         </div>
-        <!-- LOGO NEON -->
-        <div class="logo_lg">
-          <img src="./Assets/pictures/nnneon.png" class="neon" alt="neon" />
-          <div class="hideElement"><div id="clock"></div></div>
-        </div>
-      </div>
-    </header>
 
-    <!-- QUI SOMMES NOUS -->
-    <section class="aboutUs" id="qui-sommes-nous">
-      <div class="img_aboutUs" data-aos="fade-right" data-aos-offset="-500">
-        <div class="laptop_img"></div>
-      </div>
-      <div data-aos="fade-left" data-aos-offset="-500" class="txt_aboutUs">
-        <h3>Qui sommes nous ?</h3>
-        <h2>Nous formons avant tout une équipe solidaire et unie</h2>
-        <p>
-          Lorsque nous évoquons le mot <strong>"équipe"</strong>, il résonne
-          avec force et solidarité, forgée par une passion commune. Une passion
-          qui nous a réunis et que nous mettons à votre service pour concrétiser
-          vos idées. Vous avez le pouvoir de sélectionner vos équipes tout au
-          long du projet, mais sachez que tous nos développeurs sont avides de
-          code, assoiffés d'<strong>innovation</strong>.
-        </p>
-        <div class="respBtn">
-          <a href="#contactezNous" class="btnGlobale plusDetails">
-            Plus de détails
+        <br />
+        <div class="hideElement">
+          <p>Ouvrez les portes d'un web unique, où votre vision prend vie</p>
+          <p>
+            pour briller en réalité avec l'excellence digitale à votre portée.
+          </p>
+        </div>
+        <div class="hideElement">
+          <div class="quality"><span></span><i id="text_quality"></i></div>
+        </div>
+        <!-- BUTTONS -->
+        <div class="hideElement">
+          <a href="#qui-sommes-nous" class="btnfos btnfos-1">
+            <svg>
+              <rect x="0" y="0" fill="none" width="100%" height="100%" />
+            </svg>
+            Qui sommes nous ?
           </a>
         </div>
       </div>
-    </section>
-    <div data-aos="fade-up" data-aos-offset="-500" class="quotes">
-      <blockquote class="sidekick">
-        L'originalité d'un projet informatique réside dans la combinaison unique
-        de talents créatifs, de visions novatrices et d'une exécution technique
-        brillante, formant ainsi la toile de fond d'une révolution numérique.
-        <cite> Inconnu</cite>
-      </blockquote>
+      <!-- LOGO NEON -->
+      <div class="logo_lg">
+        <img src="./Assets/pictures/nnneon.webp" class="neon" alt="neon" />
+        <div class="hideElement">
+          <div id="clock"></div>
+        </div>
+      </div>
     </div>
+  </header>
 
-    <!-- NOS SERVICES -->
-    <section class="nosService" id="services">
-      <span class="spanH1">
-        <h1 class="serviceH1">RETINA</h1>
-      </span>
-      <h1>Nos Services</h1>
+  <!-- QUI SOMMES NOUS -->
+  <section class="aboutUs" id="qui-sommes-nous">
+    <div class="img_aboutUs revealFromLeft">
+      <div class="laptop_img"></div>
+    </div>
+    <div class="txt_aboutUs revealFromRight">
+      <h3>Qui sommes nous ?</h3>
+      <h2>Nous formons avant tout une équipe solidaire et unie</h2>
       <p>
-        Faites confiance à notre équipe spécialisée dans le domaine du
-        développement, alliant des talents créatifs, des visions novatrices pour
-        mener à bien votre projet avec succès.
+        Lorsque nous évoquons le mot <strong>"équipe"</strong>, il résonne
+        avec force et solidarité, forgée par une passion commune. Une passion
+        qui nous a réunis et que nous mettons à votre service pour concrétiser
+        vos idées. Vous avez le pouvoir de sélectionner vos équipes tout au
+        long du projet, mais sachez que tous nos développeurs sont avides de
+        code, assoiffés d'<strong>innovation</strong>.
       </p>
-      <div class="allServices">
-        <div data-aos="fade-left" data-aos-offset="-500" class="services">
-          <span class="imgServices"
-            ><img src="./Assets/pictures/vsCode.png" alt=""
-          /></span>
-          <h4>Developpement Web / Mobile</h4>
-          <p>
-            Découvrez notre expertise en solutions de développement
-            d'applications innovantes et sur mesure, conçues pour répondre
-            précisément aux besoins de nos clients.
-          </p>
-        </div>
-        <div data-aos="fade-left" data-aos-offset="-500" class="services">
-          <span class="imgServices"
-            ><img src="./Assets/pictures/adobeCC.png" alt=""
-          /></span>
-          <h4>UI / UX Design</h4>
-          <p>
-            Notre engagement : offrir une expérience utilisateur optimale à nos
-            clients à travers une interface de qualité supérieure qui marque les
-            esprits.
-          </p>
-        </div>
+      <div class="respBtn">
+        <a href="#contactezNous" class="btnGlobale plusDetails">
+          Plus de détails
+        </a>
       </div>
-    </section>
+    </div>
+  </section>
+  <div class="quotes revealFromOpacity">
+    <blockquote class="sidekick">
+      L'originalité d'un projet informatique réside dans la combinaison unique
+      de talents créatifs, de visions novatrices et d'une exécution technique
+      brillante, formant ainsi la toile de fond d'une révolution numérique.
+      <cite> Inconnu</cite>
+    </blockquote>
+  </div>
 
-    <!-- NOS PROJETS -->
-    <section class="nosProjets">
-      <h1>Nos Projets</h1>
-      <p>
-        Plongez dans l'ère numérique en toute confiance et laissez-nous
-        transformer vos projets en succès.
-      </p>
-      <div class="projectSection">
-        <div class="imgProject">
-          <img src="./Assets/pictures/sotw.webp" alt="" />
-        </div>
-        <div class="detailsProject">
-          <h4>Skill of the World</h4>
-          <p>
-            Plateforme de recrutement externalisé qui permet la validation des
-            candidatures, le tri des CV, et facilite le recrutement national et
-            international grâce à l'expertise en RPO et à l'externalisation RH.
-          </p>
-        </div>
+  <!-- NOS SERVICES -->
+  <section class="nosService" id="services">
+    <span class="absoluteH1">
+      <h1 class="serviceH1">RETINA</h1>
+    </span>
+    <h1 class="revealScale">Nos Services</h1>
+    <p class="revealFromOpacity">
+      Faites confiance à notre équipe spécialisée dans le domaine du
+      développement, alliant des talents créatifs, des visions novatrices pour
+      mener à bien votre projet avec succès.
+    </p>
+    <div class="allServices">
+      <div class="services revealFromLeft">
+        <span class="imgServices">
+          <img src="./Assets/pictures/vsCode.webp" alt="vsCode_picture" />
+        </span>
+        <h4>Developpement Web / Site vitrine</h4>
+        <p>
+          Découvrez notre expertise en solutions de développement
+          d'applications innovantes et sur mesure, conçues pour répondre
+          précisément aux besoins de nos clients.
+        </p>
       </div>
-    </section>
+      <div class="services revealFromRight">
+        <span class="imgServices">
+          <img src="./Assets/pictures/mobile.webp" alt="https://icons8.com/icon/nH6L66328KwU/android-phone" />
+        </span>
+        <h4>Developpement application Mobile</h4>
+        <p>
+          Transformez vos idées en applications mobiles de qualité avec notre service de développement, contactez-nous dès aujourd'hui pour donner vie à votre projet mobile.
+        </p>
+      </div>
+      <div class="services revealFromLeft">
+        <span class="imgServices">
+          <img src="./Assets/pictures/laptop1.webp" alt="https://icons8.com/icon/jPRHtH0Uc2hu/e-learning" />
+        </span>
+        <h4>Site E-commerce</h4>
+        <p>
+          Créez votre boutique en ligne avec notre service de site e-commerce. Vendez vos produits facilement et efficacement sur internet.
+        </p>
+      </div>
+      <div class="services revealFromRight">
+        <span class="imgServices">
+          <img src="./Assets/pictures/adobeCC.webp" alt="adobe_picture" />
+        </span>
+        <h4>UI / UX Design</h4>
+        <p>
+          Notre engagement : offrir une expérience utilisateur optimale à nos
+          clients à travers une interface de qualité supérieure qui marque les
+          esprits.
+        </p>
+      </div>
+    </div>
+  </section>
 
-    <!-- NOTRE TEAM -->
-    <section class="teamSection" id="ourTeam">
-      <div class="text_team">
-        <h1>LA TEAM</h1>
-        <p>Faites la connaissance des développeurs qui collaboreront avec vous.</p>
+  <!-- NOS PROJETS -->
+  <section class="nosProjets">
+    <h1 class="revealScale">Nos Projets</h1>
+    <p class="revealFromOpacity">
+      Plongez dans l'ère numérique en toute confiance et laissez-nous
+      transformer vos projets en succès.
+    </p>
+    <div class="projectSection">
+      <div class="imgProject revealFromLeft">
+        <img src="./Assets/pictures/sotw.webp" alt="" />
       </div>
-      <div class="team">
-        <div
-          data-aos="fade-right"
-          data-aos-delay="500"
-          data-aos-duration="1000"
-          data-aos-offset="-500"
-          class="our-team"
-        >
-          <img src="./Assets/pictures/team/TSAROANA.webp" alt="" />
-          <div class="team-content">
-            <h3 class="title">Tsaroana</h3>
-            <span class="post">Développeur front . LEAD</span>
-          </div>
-        </div>
-        <div
-          data-aos="fade-down"
-          data-aos-delay="500"
-          data-aos-duration="1000"
-          data-aos-offset="-500"
-          class="our-team"
-        >
-          <img src="./Assets/pictures/team/AUBIN.webp" alt="" />
-          <div class="team-content">
-            <h3 class="title">AUBIN</h3>
-            <span class="post">développeur mobile</span>
-          </div>
-        </div>
-        <div
-          data-aos="fade-up"
-          data-aos-delay="500"
-          data-aos-duration="1000"
-          data-aos-offset="-500"
-          class="our-team"
-        >
-          <img src="./Assets/pictures/team/HASINA.webp" alt="" />
-          <div class="team-content">
-            <h3 class="title">HASINA</h3>
-            <span class="post">Développeur Back</span>
-          </div>
-        </div>
-        <div
-          data-aos="fade-left"
-          data-aos-delay="500"
-          data-aos-duration="1000"
-          data-aos-offset="-500"
-          class="our-team"
-        >
-          <img src="./Assets/pictures/team/FANA.webp" alt="" />
-          <div class="team-content">
-            <h3 class="title">FANANTENANA</h3>
-            <span class="post">Designeur Web . Graphiste</span>
-          </div>
-        </div>
+      <div class="detailsProject revealFromRight">
+        <h4>Skill of the World</h4>
+        <p>
+          Plateforme de recrutement externalisé qui permet la validation des
+          candidatures, le tri des CV, et facilite le recrutement national et
+          international grâce à l'expertise en RPO et à l'externalisation RH.
+        </p>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- CONTACTEZ NOUS -->
-    <section class="background contactezNous" id="contactezNous">
-      <div class="container">
-        <div class="screen">
-          <div class="screen-header">
-            <div class="screen-header-left">
-              <div class="screen-header-button close"></div>
-              <div class="screen-header-button maximize"></div>
-              <div class="screen-header-button minimize"></div>
+  <!-- NOTRE TEAM -->
+  <section class="teamSection" id="ourTeam">
+    <div class="text_team">
+      <h1 class="revealScale">LA TEAM</h1>
+      <p class="revealFromOpacity">Faites la connaissance des développeurs qui collaboreront avec vous.</p>
+    </div>
+    <div class="team">
+      <div class="our-team revealScaleCenter">
+        <img src="./Assets/pictures/team/TSAROANA.webp" alt="" />
+        <div class="team-content">
+          <h3 class="title">Tsaroana</h3>
+          <span class="post">Développeur front . LEAD</span>
+        </div>
+      </div>
+      <div class="our-team revealScaleCenter">
+        <img src="./Assets/pictures/team/AUBIN.webp" alt="" />
+        <div class="team-content">
+          <h3 class="title">AUBIN</h3>
+          <span class="post">développeur mobile</span>
+        </div>
+      </div>
+      <div class="our-team revealScaleCenter">
+        <img src="./Assets/pictures/team/HASINA.webp" alt="" />
+        <div class="team-content">
+          <h3 class="title">HASINA</h3>
+          <span class="post">Développeur Back</span>
+        </div>
+      </div>
+      <div class="our-team revealScaleCenter">
+        <img src="./Assets/pictures/team/FANA.webp" alt="" />
+        <div class="team-content">
+          <h3 class="title">FANANTENANA</h3>
+          <span class="post">Designeur Web . Graphiste</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TECHNO INFINI -->
+  <div class="caroussel revealFromOpacity">
+    <div class="left__caroussel"></div>
+    <div class="right__caroussel"></div>
+    <div class="caroussel__inner">
+      <!-- FIRST -->
+      <div class="item">
+        <img src="./Assets/pictures/techno/flutter.webp" alt="Illustration" style="width: 100px;">
+      </div>
+      <div class="item">
+        <img src="./Assets/pictures/techno/2.svg" alt="Illustration">
+      </div>
+      <div class="item">
+        <img src="./Assets/pictures/techno/nodejs.webp" alt="Illustration" style="width: 100px;">
+      </div>
+      <div class="item">
+        <img src="./Assets/pictures/techno/3.svg" alt="Illustration">
+      </div>
+      <div class="item">
+        <img src="./Assets/pictures/techno/wordpress.webp" alt="Illustration" style="width: 100px;">
+      </div>
+      <div class="item">
+        <img src="./Assets/pictures/techno/4.svg" alt="Illustration">
+      </div>
+      <div class="item">
+        <img src="./Assets/pictures/techno/Expressjs.webp" alt="Illustration" style="width: 100px;">
+      </div>
+      <div class="item">
+        <img src="./Assets/pictures/techno/5.svg" alt="Illustration">
+      </div>
+      <div class="item">
+        <img src="./Assets/pictures/techno/mongo.webp" alt="Illustration" style="width: 100px;">
+      </div>
+      <div class="item">
+        <img src="./Assets/pictures/techno/6.svg" alt="Illustration">
+      </div>
+      <!-- SECOND -->
+      <div class="item">
+        <img src="./Assets/pictures/techno/flutter.webp" alt="Illustration" style="width: 100px;">
+      </div>
+      <div class="item">
+        <img src="./Assets/pictures/techno/2.svg" alt="Illustration">
+      </div>
+      <div class="item">
+        <img src="./Assets/pictures/techno/nodejs.webp" alt="Illustration" style="width: 100px;">
+      </div>
+      <div class="item">
+        <img src="./Assets/pictures/techno/3.svg" alt="Illustration">
+      </div>
+      <div class="item">
+        <img src="./Assets/pictures/techno/wordpress.webp" alt="Illustration" style="width: 100px;">
+      </div>
+      <div class="item">
+        <img src="./Assets/pictures/techno/4.svg" alt="Illustration">
+      </div>
+      <div class="item">
+        <img src="./Assets/pictures/techno/Expressjs.webp" alt="Illustration" style="width: 100px;">
+      </div>
+      <div class="item">
+        <img src="./Assets/pictures/techno/5.svg" alt="Illustration">
+      </div>
+      <div class="item">
+        <img src="./Assets/pictures/techno/mongo.webp" alt="Illustration" style="width: 100px;">
+      </div>
+      <div class="item">
+        <img src="./Assets/pictures/techno/6.svg" alt="Illustration">
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTACTEZ NOUS -->
+  <section class="background contactezNous" id="contactezNous">
+    <div class="container revealFromBottom">
+      <div class="screen">
+        <div class="screen-header">
+          <div class="screen-header-left">
+            <div class="screen-header-button close"></div>
+            <div class="screen-header-button maximize"></div>
+            <div class="screen-header-button minimize"></div>
+          </div>
+          <div class="screen-header-right">
+            <div class="screen-header-ellipsis"></div>
+            <div class="screen-header-ellipsis"></div>
+            <div class="screen-header-ellipsis"></div>
+          </div>
+        </div>
+        <div class="screen-body">
+          <div class="screen-body-item left">
+            <div class="app-title">
+              <span>CONTACTEZ</span>
+              <span>NOUS</span>
             </div>
-            <div class="screen-header-right">
-              <div class="screen-header-ellipsis"></div>
-              <div class="screen-header-ellipsis"></div>
-              <div class="screen-header-ellipsis"></div>
-            </div>
+            <div class="app-contact">CONTACT INFO : +261 34 94 956 45</div>
           </div>
-          <div class="screen-body">
-            <div class="screen-body-item left">
-              <div class="app-title">
-                <span>CONTACTEZ</span>
-                <span>NOUS</span>
+          <div class="screen-body-item">
+            <div class="app-form">
+              <div class="app-form-group">
+                <input class="app-form-control" placeholder="PSEUDO" />
               </div>
-              <div class="app-contact">CONTACT INFO : +261 34 94 956 45</div>
-            </div>
-            <div class="screen-body-item">
-              <div class="app-form">
-                <div class="app-form-group">
-                  <input class="app-form-control" placeholder="PSEUDO" />
-                </div>
-                <div class="app-form-group">
-                  <input class="app-form-control" placeholder="EMAIL" />
-                </div>
-                <div class="app-form-group message">
-                  <input class="app-form-control" placeholder="MESSAGE" />
-                </div>
-                <div class="app-form-group buttons">
-                  <button class="app-form-button">ENVOYER</button>
-                </div>
+              <div class="app-form-group">
+                <input class="app-form-control" placeholder="EMAIL" />
+              </div>
+              <div class="app-form-group message">
+                <input class="app-form-control" placeholder="MESSAGE" />
+              </div>
+              <div class="app-form-group buttons">
+                <button class="app-form-button">ENVOYER</button>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- TECHNO INFINI -->
-    <section class="slider">
-      <div class="slide-track">
-        <div class="slide">
-          <img
-            src="/Assets/pictures/techno/flutter.webp"
-            height="100"
-            width="250"
-            alt=""
-          />
-        </div>
-        <div class="slide">
-          <img
-            src="/Assets/pictures/techno/nodejs.webp"
-            height="100"
-            width="250"
-            alt=""
-          />
-        </div>
-        <div class="slide">
-          <img
-            src="/Assets/pictures/techno/react.webp"
-            height="100"
-            width="250"
-            alt=""
-          />
-        </div>
-        <div class="slide">
-          <img
-            src="/Assets/pictures/techno/wordpress.webp"
-            height="100"
-            width="250"
-            alt=""
-          />
-        </div>
-        <div class="slide">
-          <img
-            src="/Assets/pictures/techno/flutter.webp"
-            height="100"
-            width="250"
-            alt=""
-          />
-        </div>
-        <div class="slide">
-          <img
-            src="/Assets/pictures/techno/nodejs.webp"
-            height="100"
-            width="250"
-            alt=""
-          />
-        </div>
-        <div class="slide">
-          <img
-            src="/Assets/pictures/techno/react.webp"
-            height="100"
-            width="250"
-            alt=""
-          />
-        </div>
-        <div class="slide">
-          <img
-            src="/Assets/pictures/techno/wordpress.webp"
-            height="100"
-            width="250"
-            alt=""
-          />
-        </div>
+  <!-- FOOTER -->
+  <footer>
+    <div class="footerSection">
+      <div class="logoFooter">
+        <img src="./Assets/pictures/logo_noBG.webp" alt="" />
       </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer>
-      <div class="footerSection">
-        <div class="logoFooter">
-          <img src="./Assets/pictures/logo_noBG.webp" alt="" />
-        </div>
-        <div class="expertiseFooter">
-          <h2>Expertises</h2>
-          <p>Développement Mobile</p>
-          <p>Développement Web</p>
-          <p>Design Web</p>
-        </div>
-        <div class="contactFooter">
-          <h2>Contactez-nous</h2>
-          <p>Antananarivo, Madagascar</p>
-          <p>+261 34 94 956 45</p>
-          <p>retina.groupe@gmail.com</p>
-        </div>
+      <div class="expertiseFooter">
+        <h2>Expertises</h2>
+        <p>Développement Web</p>
+        <p>Application Mobile</p>
+        <p>Site vitrine</p>
+        <p>E-Commerce</p>
+        <p>Design Web</p>
       </div>
-    </footer>
+      <div class="contactFooter">
+        <h2>Contactez-nous</h2>
+        <p>Antananarivo, Madagascar</p>
+        <p>+261 34 94 956 45</p>
+        <p>retina.groupe@gmail.com</p>
+      </div>
+    </div>
+  </footer>
 
-    <!-- SCRIPT -->
-    <script src="./Assets/packages/gsap.min.js"></script>
-    <script src="./Assets/packages/ScrollTrigger.min.js"></script>
-    <script src="./Assets/packages/animate.js"></script>
-    <script>
-      console.log(AOS.init())
-    </script>
-    <script src="./Assets/script.js"></script>
-  </body>
+  <!-- SCRIPT -->
+  <!-- LENIS -->
+  <script src="./Assets/packages/lenis.min.js"></script>
+  <script src="./Assets/packages/gsap.min.js"></script>
+  <script src="./Assets/packages/ScrollTrigger.min.js"></script>
+  <script src="./Assets/script.js"></script>
+</body>
+
 </html>

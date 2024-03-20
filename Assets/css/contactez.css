@@ -6,7 +6,7 @@
   position: relative;
   text-align: center;
   max-width: 1200px;
-  width: 100vw;
+  /* width: 100vw; */
   margin: 0 auto;
 }
 
@@ -17,7 +17,7 @@
 .container {
   flex: 0 1 700px;
   margin: auto;
-  padding: 10px;
+  padding: 70px 10px 100px 10px;
 }
 
 .screen {

@@ -1,27 +1,73 @@
-AOS.init();
+gsap.registerPlugin(ScrollTrigger);
 
-window.addEventListener("load", function () {
-  var loadingOverlay = document.querySelector(".wrapperLoad");
-  loadingOverlay.style.display = "none";
-  document.body.style.overflow = "auto";
-  document.body.style.overflowX = "hidden";
-  revealAnim();
-});
+//? LENIS 
+const lenis = new Lenis()
 
-// CURSOR
+lenis.on('scroll', (e) => {
+  console.log(e)
+})
 
-gsap.set(".follower", { xPercent: -50, yPercent: -50 });
-gsap.set(".cursor", { xPercent: -50, yPercent: -50 });
+lenis.on('scroll', ScrollTrigger.update)
 
-var follow = document.querySelector(".follower");
-var cur = document.querySelector(".cursor");
+gsap.ticker.add((time)=>{
+  lenis.raf(time * 1000)
+})
 
-window.addEventListener("mousemove", (e) => {
-  gsap.to(cur, 0, { x: e.clientX, y: e.clientY });
-  gsap.to(follow, 0.7, { x: e.clientX, y: e.clientY });
-});
+gsap.ticker.lagSmoothing(0)
 
-// SCROLLBAR
+//? LOADING
+const tl = gsap.timeline();
+
+tl.to(".progress", {
+  duration: 1,
+  width: "100%",
+  ease: "power1.inOut",
+  delay: 0.5
+}, "<")
+  .from(".wrapperLoad h1", {
+    autoAlpha: 0,
+    y: -200,
+    duration: 1.5,
+    ease: "expo.out",
+    onComplete: () => {
+      setTimeout(() => {
+        document.querySelector(".wrapperLoad h1").style.display = "none";
+      }, 1200);
+    }
+  }, "<")
+  .to(".progress", {
+    duration: 1,
+    height: "100%",
+    top: 0,
+    ease: "power1.inOut",
+    delay: 2,
+    onComplete: () => {
+      document.querySelector(".progress").style.display = "none";
+    }
+  }, "<")
+  .to(".wrapperLoad", {
+    opacity: 0,
+    onComplete: () => {
+      document.querySelector(".wrapperLoad").style.display = "none";
+      document.body.style.overflow = "auto";
+      document.body.style.overflowX = "hidden";
+      revealAnim();
+    }
+  })
+
+//? CURSOR
+// gsap.set(".follower", { xPercent: -50, yPercent: -50 });
+// gsap.set(".cursor", { xPercent: -50, yPercent: -50 });
+
+// var follow = document.querySelector(".follower");
+// var cur = document.querySelector(".cursor");
+
+// window.addEventListener("mousemove", (e) => {
+//   gsap.to(cur, 0, { x: e.clientX, y: e.clientY });
+//   gsap.to(follow, 0.7, { x: e.clientX, y: e.clientY });
+// });
+
+//? SCROLLBAR
 
 window.addEventListener("scroll", function () {
   var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
@@ -32,7 +78,7 @@ window.addEventListener("scroll", function () {
   document.getElementById("progress-bar").style.width = scrollProgress + "%";
 });
 
-// TYPING EFFECT
+//? TYPING EFFECT
 
 var texts = ["original", "impactant", "unique"]; /* The array of texts */
 var speed = 90; /* The speed/duration of the effect in milliseconds */
@@ -65,7 +111,7 @@ window.addEventListener("DOMContentLoaded", function () {
   typeWriter();
 });
 
-// ACTIVE ON CLICK
+//? ACTIVE ON CLICK
 var elements = document.querySelectorAll("nav a");
 
 for (var i = 0; i < elements.length; i++) {
@@ -80,7 +126,7 @@ for (var i = 0; i < elements.length; i++) {
   });
 }
 
-// HORLOGE
+//? HORLOGE
 
 function updateClock() {
   var currentDate = new Date();
@@ -96,7 +142,7 @@ function updateClock() {
 
 setInterval(updateClock, 1000);
 
-// ANIMATION HEADER
+//? ANIMATION HEADER
 
 var logo_xs = document.querySelector(".logo_xs");
 var retina = document.querySelector(".retina");
@@ -107,7 +153,15 @@ var clock = document.querySelector("#clock");
 var quality = document.querySelector(".quality");
 var btnfos = document.querySelector(".btnfos");
 
-gsap.registerPlugin(ScrollTrigger);
+gsap.set(logo_xs, { autoAlpha: 0, y: -50 });
+gsap.set(retina, { autoAlpha: 0, y: 30 });
+gsap.set(textH1, { autoAlpha: 0, y: 75 });
+gsap.set(textP, { autoAlpha: 0, y: 75 });
+gsap.set(neon, { autoAlpha: 0 });
+gsap.set(clock, { autoAlpha: 0, y: 30 });
+gsap.set(quality, { autoAlpha: 0, y: 30 });
+gsap.set(btnfos, { autoAlpha: 0, y: 30 });
+gsap.set("nav", { autoAlpha: 0, y: 30 });
 
 function revealAnim() {
   const timeline = gsap.timeline({
@@ -115,21 +169,15 @@ function revealAnim() {
   });
 
   timeline
-    .from(logo_xs, { autoAlpha: 0, y: -50, delay: 0.5 })
-    .from(retina, { autoAlpha: 0, y: 30 }, "-=0.2")
-    .from(textH1, { autoAlpha: 0, y: 75 }, "-=0.2")
-    .from(textP, { autoAlpha: 0, y: 75 }, "-=0.2")
-    .from(neon, { autoAlpha: 0 }, "-=0.2")
-    .from(clock, { autoAlpha: 0, y: 30 }, "-=0.2")
-    .from(quality, { autoAlpha: 0, y: 30 }, "-=0.1")
-    .fromTo(
-      btnfos,
-      0.1,
-      { autoAlpha: 0, y: 30 },
-      { autoAlpha: 1, y: 0 },
-      "-=0.2"
-    )
-    .from("nav", { autoAlpha: 0, y: 30, ease: "bounce", delay: 0.5 });
+    .to(logo_xs, { autoAlpha: 1, y: 0, delay: 0.5 })
+    .to(retina, { autoAlpha: 1, y: 0 }, "-=0.2")
+    .to(textH1, { autoAlpha: 1, y: 0 }, "-=0.2")
+    .to(textP, { autoAlpha: 1, y: 0 }, "-=0.2")
+    .to(neon, { autoAlpha: 1 }, "-=0.2")
+    .to(clock, { autoAlpha: 1, y: 0 }, "-=0.2")
+    .to(quality, { autoAlpha: 1, y: 0 }, "-=0.1")
+    .to(btnfos, 0.1, { autoAlpha: 1, y: 0 }, "-=0.2")
+    .to("nav", { autoAlpha: 1, y: 0, delay: 0.5 });
 }
 
 gsap.to(`.spanH1`, {

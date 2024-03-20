@@ -5,11 +5,6 @@
   margin: 0;
   box-sizing: border-box;
   /* border: 1px solid red; */
-  cursor: none;
-}
-
-html {
-  scroll-behavior: smooth;
 }
 
 @font-face {
@@ -43,6 +38,23 @@ body {
   background-color: #fff;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   overflow: hidden;
+  --sb-track-color: #ffffff;
+  --sb-thumb-color: #f8b11f;
+  --sb-size: 10px;
+} 
+
+body::-webkit-scrollbar {
+  width: var(--sb-size);
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 10px;
 }
 
 nav {
@@ -157,7 +169,8 @@ header {
 }
 
 .text h1 {
-  font-size: 5vw;
+  font-size: clamp(2.1875rem, 1.5508rem + 3.1836vw, 4.26875rem);
+  width: fit-content;
 }
 
 .retina {
@@ -175,7 +188,7 @@ header {
 }
 
 .text p {
-  font-size: 1.3vw;
+  font-size: clamp(0.6875rem, 0.611rem + 0.3824vw, 0.9375rem);
 }
 
 .quality {
@@ -262,7 +275,7 @@ header {
 
 #clock {
   font-family: "BlackOpsOne";
-  font-size: 2vw;
+  font-size: clamp(1.25rem, 1.11rem + 0.6998vw, 1.7075rem);
   text-align: center;
   color: #fff;
 }
@@ -285,24 +298,18 @@ header {
 
   header .largeH1 {
     top: 15%;
-    font-size: 50vw;
   }
 
   .text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     position: relative;
     top: -35px;
     width: 58%;
     margin: 0 auto;
   }
-
-  .text h1 {
-    font-size: 45px;
-  }
-
-  .text p {
-    font-size: 12px;
-  }
-
   .retina {
     height: 15px;
     width: 52px;
@@ -314,15 +321,12 @@ header {
 
   .logo_lg {
     width: 70%;
+    height: fit-content;
     margin: 0 auto;
   }
 
   .logo_lg .neon {
     display: none;
-  }
-
-  #clock {
-    font-size: 20px;
   }
 }
 
@@ -338,7 +342,7 @@ header {
     width: 100%;
   }
   .logo_lg .neon {
-    display: block;
+    display: none;
   }
   .quality {
     font-size: 10px;
